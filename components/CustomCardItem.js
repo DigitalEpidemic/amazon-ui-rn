@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, Image } from "react-native";
 import { Card, CardItem, Right } from "native-base";
 import StarRating from "react-native-star-rating";
 
-export default class ConsiderCardItem extends Component {
+export default class CustomCardItem extends Component {
   render() {
     return (
       <CardItem>
@@ -12,7 +12,7 @@ export default class ConsiderCardItem extends Component {
         </View>
         <Right style={{ flex: 1, alignItems: "flex-start", height: 90, paddingHorizontal: 20 }}>
           <Text style={{ fontSize: 15 }}>{this.props.itemName}</Text>
-          <Text style={{ color: "#808080", fontSize: 12 }}>{this.props.itemCreator}</Text>
+          <Text style={{ color: "#808080", fontSize: 12 }}>by {this.props.itemCreator}</Text>
           <Text style={{ fontSize: 15 }}>
             {this.props.itemPrice}
             {"  "}
