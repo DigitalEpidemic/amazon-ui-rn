@@ -13,7 +13,11 @@ class HomeScreen extends Component {
         {/* Top of header */}
         <Header style={[{ backgroundColor: "#232f3f", height: 90 }, styles.androidHeader]}>
           <Left style={{ flexDirection: "row" }}>
-            <Icon name="md-menu" style={{ color: "#fff", marginRight: 15 }} />
+            <Icon
+              onPress={() => this.props.navigation.openDrawer()}
+              name="md-menu"
+              style={{ color: "#fff", marginRight: 15 }}
+            />
             <Image source={require("../assets/logo.png")} style={{ marginTop: 5 }} />
           </Left>
           <Right>
